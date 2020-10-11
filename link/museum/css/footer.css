@@ -1,0 +1,14 @@
+/* footer */
+
+/* foot_inner */
+ul.foot_menu{float:left;padding-top:15px;}
+ul.foot_menu li{float:left;}
+ul.foot_menu li a{padding:0 10px;}
+p.foot_img{float:left;padding-left:100px;padding-top:8px;}
+#footer form{float:right;}
+#footer select{float:left;height:30px;margin-top:8px;margin-left:11px;}
+p.foot_logo{float:left;clear:both;padding-top:30px;}
+address{float:left;padding-top:30px;padding-left:20px;}
+address span{display:block;padding-top:5px;font-size:10px;}
+ul.award{float:right;padding-top:30px;}
+ul.award li{float:left;padding-left:15px;}

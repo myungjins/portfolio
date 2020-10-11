@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* reset.css */
+html.body{width:100%;height:100%;}
+/*가로 100% 세로 100% */
+
+body,div,dl,dt,dd,ul,li,ol,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,table{margin:0;padding:0;}
+
+table{width:100%;border-collapse:collapse;}
+/* 셀과 셀사이 벌어질때 붙쳐주는거 collapse 초기화 시키는거임 */
+
+img,fieldset{border:none;}
+
+address,caption,cite,code,em,strong,th{font-style:normal;font-weight:normal;}
+/* 기울어져 있는걸 반듯하게 하는거 font-style:normal */
+
+ol,ul{list-style:none;}
+
+caption,th{text-align:left;}
+/* 원래 가운데 정렬이 되있는데 왼쪽으로 초기화 시킨거다 */
+
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+
+q:after,q:before{content:"";}
+/* q앞에 ""을 없앤다는거 */
+
+abbr,acronym{border:none;}
+/* 축약어 밑줄 없애는거 초기화 */
+
+img,input,select{vertical-align:middle;}
+
+hr{display:none;}
+/*스크린 리더에 읽어줄 필요가 없다 */
+
+#skipNavi,.blind{position:absolute;left:0;top:0;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px; overflow:hidden;visibility:hidden;}
+/*화면에서 안보이게 하려고 */

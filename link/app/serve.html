@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>앱코딩-3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minmum-scale=1.0, user-scaleble=no "/>
+<!-- 상태 바의 색상을 정하는 코드 --> <!-- 배터리 있는곳 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 바로가기 아이콘, 아이폰,안드로이드 둘다 적용-->
+<link rel="apple-touch-icon-precomposed" href=".png" />
+<!-- 인트로 화면을 설정하는 코드 -->
+<link rel="apple-touch-startup-image" href=".png" />
+
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<style>
+/* layout */
+body > header{width:100%;margin:0 auto;}
+body > div.content{width:370px;height:565px;margin:0 auto;}
+/* header */
+div.header_wrap{position:relative;background:#FFD9A5;height:150px;}
+div.header_wrap h1{position:absolute;top:40px;left:50%;width:70px;margin-left:-35px;height:70px;}
+div.header_wrap span.menu_icon{position:absolute;right:16px;top:10px;width:45px;height:45px;}
+div.header_wrap span.arrow_icon{position:absolute;left:16px;top:10px;width:45px;height:45px;}
+
+nav.gnb{width:100%;position:absolute;top:105px;}
+nav.gnb:after{content:"";display:block;clear:both;}
+nav.gnb li{float:left;width:33.33%;text-align:center;}
+nav.gnb li img{width:40px;height:40px;transition:all 1s ease 0s;}
+nav.gnb li:hover img{transform:rotateY(180deg);}
+
+div.menu_box{display:none;z-index:10;width:200px;height:100%;position:absolute;top:0;right:0;
+background:#85D0D4;opacity:0.9;}
+div.menu_box ul li a{text-decoration:none;color:#fff;font-weight:bold;}
+div.menu_box ul li:hover a{color:#FFD9A5;}
+div.menu_box ul li img{width:30px;margin-right:10px;}
+
+div.menu_box ul li:first-of-type a{position:absolute;left:55%;transform:translateX(-55%);}
+div.menu_box ul li:first-of-type img{display:block;width:70px;height:70px;}
+
+div.menu_box ul li:nth-of-type(2){position:absolute;top:160px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(3){position:absolute;top:220px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(4){position:absolute;top:280px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(5){position:absolute;top:340px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(6){position:absolute;top:400px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(7){position:absolute;top:460px;left:20px;transition:all 0.5s ease 0s;}
+div.menu_box ul li:nth-of-type(8){position:absolute;top:520px;left:20px;transition:all 0.5s ease 0s;}
+
+div.menu_box ul li:nth-of-type(2):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(3):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(4):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(5):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(6):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(7):hover{transform:scale(1.2);}
+div.menu_box ul li:nth-of-type(8):hover{transform:scale(1.2);}
+
+div.menu_box span.close_icon img{width:25px;height:25px;margin:10px 0 0 10px;}
+
+
+div.content div{float:left;}
+div{transition:all 0.5s;}
+
+div.pic_1{border:1px solid #7FD2D1;width:150px;height:123px;margin:20px 20px 0 20px;}
+div.pic_1 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_1 p img.img_1{width:110px;height:80px;margin:2px 0 0 20px;}
+div.pic_1 p span img{width:25px;height:20px;}
+div.pic_1:hover{transform:scale(1.1);}
+
+div.pic_2{border:1px solid #7FD2D1;width:150px;height:235px;margin:20px 0 0 0;}
+div.pic_2 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_2 p img.img_2{width:110px;height:190px;margin:0 0 0 20px;}
+div.pic_2 p span img{width:25px;height:20px;}
+div.pic_2:hover{transform:scale(1.1);}
+
+div.pic_3{border:1px solid #7FD2D1;width:150px;height:235px;margin:-95px 20px 0 20px;}
+div.pic_3 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_3 p img.img_3{width:110px;height:190px;margin:0 0 0 20px;}
+div.pic_3 p span img{width:25px;height:20px;}
+div.pic_3:hover{transform:scale(1.1);}
+
+div.pic_4{border:1px solid #7FD2D1;width:150px;height:123px;margin:17px 0 0 0;}
+div.pic_4 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_4 p img.img_4{width:110px;height:80px;margin:0 0 0 20px;}
+div.pic_4 p span img{width:25px;height:20px;}
+div.pic_4:hover{transform:scale(1.1);}
+
+div.pic_5{border:1px solid #7FD2D1;width:150px;height:120px;margin:20px 20px 0 20px;}
+div.pic_5 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_5 p img.img_5{width:110px;height:80px;margin:0 0 0 20px;}
+div.pic_5 p span img{width:25px;height:20px;}
+div.pic_5:hover{transform:scale(1.1);}
+
+div.pic_6{border:1px solid #7FD2D1;width:150px;height:120px;margin:20px 0 0 0;}
+div.pic_6 a{color:#7FD2D1;text-decoration:none;font-weight:bold;font-size:10px;}
+div.pic_6 p img.img_6{width:110px;height:80px;margin:0 0 0 20px;}
+div.pic_6 p span img{width:25px;height:20px;}
+div.pic_6:hover{transform:scale(1.1);}
+
+div p a span{margin:0 0 0 15px;}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header_wrap">
+	<h1><img src="images/logo.png" alt="Be mine" /></h1>
+	<a href="main.html" class="arrowBtn"><span class="arrow_icon"><img src="images/arrow.png" alt="뒤로가기"/></span></a>
+	<a href="#" class="menuBtn"><span class="menu_icon"><img src="images/menu.png" alt="메뉴바 열기"/></span></a>
+	<nav class="gnb">
+		<ul>
+			<li><a href="main.html"><img src="images/modern.png" alt="modern" /></a></li>
+			<li><a href="main.html"><img src="images/vintage.png" alt="vintage" /></a></li>
+			<li><a href="main.html"><img src="images/northen.png" alt="northen" /></a></li>
+		</ul>
+	</nav>
+</div>
+<div class="menu_box">
+		<a href="#" class="closeBtn"><span class="close_icon"><img src="images/close.png" alt="메뉴바 닫기"/></span></a>
+		<ul>
+			<li><a href="#"><img src="images/user3.png" alt="user" /></a></li>
+			<li><a href="main.html"><img src="images/home.png" alt="home" />HOME</a></li>
+			<li><a href="#"><img src="images/MD.png" alt="MD'PICK" />MD'PICK</a></li>
+			<li><a href="#"><img src="images/USER_PIC.png" alt="USER'PICK" />USER'PICK</a></li>
+			<li><a href="#"><img src="images/ALL.png" alt="ALL" />ALL</a></li>
+			<li><a href="#"><img src="images/join.png" alt="home" />JOIN</a></li>
+			<li><a href="#"><img src="images/favorite.png" alt="mypage" />FOVORITE</a></li>
+			<li><a href="#"><img src="images/mypage.png" alt="mypage" />MYPAGE</a></li>
+		</ul>
+	</div>
+</header>
+<div class="content">
+	<div class="pic_1">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />User</span><img src="images/pic_1.jpg" alt="pic1" class="img_1" /></a></p>
+	</div>
+	<div class="pic_2">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />MD</span><img src="images/pic_2.jpg" alt="pic2" class="img_2" /></a></p>
+	</div>
+	<div class="pic_3">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />User</span><img src="images/pic_3.jpg" alt="pic3" class="img_3" /></a></p>
+	</div>
+	<div class="pic_4">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />User</span><img src="images/pic_4.jpg" alt="pic4" class="img_4" /></a></p>
+	</div>
+	<div class="pic_5">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />MD</span><img src="images/pic_5.jpg" alt="pic5" class="img_5" /></a></p>
+	</div>
+	<div class="pic_6">
+		<p><a href="#"><span><img src="images/user2.png" alt="user" />User</span><img src="images/pic_6.jpg" alt="pic6" class="img_6" /></a></p>
+	</div>
+</div>
+</body>
+</html>
