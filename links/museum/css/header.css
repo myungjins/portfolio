@@ -1,0 +1,36 @@
+/* wrap */
+.site_link{width:1290px;height:30px;margin:0 auto;}
+div.site_link ul{height:30px;}
+div.site_link li{width:213px;float:left;border-right:1px solid #000;
+border-left:1px solid #000;text-align:center;line-height:240%;}
+div.site_link li a{color:#fff;}
+
+/* header */
+/* 로고 */
+h1.logo{float:left;padding-top:20px;}
+
+/* 탑메뉴 */
+div.hd_topmenu{float:right;width:540px;margin:25px 0;}
+/*dl.topMenu{padding-top:7px;}*/
+dl.topMenu dd{float:left;padding-right:15px;padding-top:7px;}
+
+/* form */
+form.srch select{border:none;margin-right:15px;}
+form.srch input.txt{height:30px;width:200px;}
+
+/* 주메뉴 */
+.gnb{z-index:30; clear:both; position:relative;}
+.gnb .nav{float:left; }
+.gnb .nav ul{width:197px;  font-size:13px; text-align:left; margin-top:-1px; 
+         border:1px solid blue; background:#faf9f9; border:1px solid #333;
+         padding:20px 0; }
+
+.gnb .menu_bg{display:none; position:absolute;}
+.gnb .menu_bg:before{background-position:center top; background-size:17px 9px; padding-top:10px; 
+content:url(../main_images/blt_gnb_arr_t.png); display:block; width:17px; height:9px;
+line-height:9px; margin:0 auto;}
+
+.gnb .nav ul li{padding:10px 0; text-indent:20px; }
+.gnb .nav ul li:hover{background:#835757; }
+.gnb .nav ul li a:hover{color:#fff; text-decoration:none;}
+

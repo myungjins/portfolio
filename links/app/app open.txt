@@ -1,0 +1,12 @@
+<script>
+$(function(){
+	$('.forweb').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("http://eunjoo3479.dothome.co.kr/app1/intro.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=370,height=620");
+	}
+});
+</script>
