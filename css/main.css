@@ -11,7 +11,7 @@ li{list-style:none;}
 
 /* content */
 #content{z-index:30;}
-#content > div{position: relative; width:100%; overflow:hidden; color:#fff; text-align:center; background-color:#fff;}
+#content > div{position: relative; width:100%; overflow:hidden; color:#fff; text-align:center; background-color:#fff; -webkit-overflow-scrolling: touch;}
 #content > div > div{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 #content > div > div > h2{font-size: 50px;font-weight: bold;color: #000;padding-bottom: 45px;}
 
@@ -155,6 +155,9 @@ header > .openbtn.white::after{background-color: #fff;}
 #page3 .owl-nav > button{margin: 0;outline: none;}
 #page3 .owl-theme .owl-nav [class*=owl-]:hover{background: transparent !important;}
 
+@media screen and (min-width:1920px) {
+  #page3 .owl-carousel .owl-item{min-width: 806.391px;}
+}
 @media screen and (max-width:1500px) {
   #page3 .owl-carousel .owl-item{height: inherit;}
   #page3 .owl-carousel .owl-item img{position: initial; transform: initial; margin: 0 auto; width: 100%;}
