@@ -59,11 +59,11 @@ header > .openbtn.white::before{background-color: #fff;}
 header > .openbtn.white::after{background-color: #fff;}
 
 @media screen and (max-width:991px) {
-  .overlay-content{margin: 0 0 0 11%;}
+  .overlay-content{margin: 0 0 0 4%;}
   .overlay a,.overlay-content > li > ul > li{font-size: 19px;}
   header > .openbtn{top:57%; right:20px; transform: translateY(-50%);}
-  header > .openbtn::before{background-color: #fff;}
-  header > .openbtn::after{background-color: #fff;}
+  header > .openbtn::before{background-color: #fff;width: 35px; height: 3px;}
+  header > .openbtn::after{background-color: #fff;width: 27px; height: 3px;}
 }
 
 @media screen and (max-height: 450px) {
